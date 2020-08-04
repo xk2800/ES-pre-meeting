@@ -4,6 +4,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
     <style> 
         body{
             background-color: black;
@@ -45,11 +47,26 @@
             border-radius: 6px;
             border: 3px solid var(--scrollbarBG);
         }
+        #typewriter{
+            color: white;
+            font-size: 40px;
+        }
     </style>
 </head>
 <body>
     <img class="logo" src="ES.png">
-    <br><br><!--br><br><br><br><br-->
+    <br><br>
+    <div id="typewriter"></div>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script>
+    const instance = new Typewriter('#typewriter', {
+      strings: ['Hello', 'Salam', '你好', 'வணக்கம்', 'Ciao', '여보세요', 'Hola', ],
+      autoStart: true,
+      loop: true,
+    });
+</script>
+
+    <br><!--br><br><br><br><br-->
     <div class="container">
         <script src="https://unpkg.com/ityped@1.0.3"></script>
         <div class="content">
@@ -60,7 +77,7 @@
     </div>
     <script>
         ityped.init('#ityped', {
-            strings:['Welcome', 'Editorial Squad Monthly Meetup August 2020', 'We start in: '],
+            strings:['Editorial Squad Monthly Meetup August 2020', 'We start in: '],
             startDelay: 200,
             loop: true
         });
@@ -92,10 +109,10 @@
         document.getElementById("demo").innerHTML = days + "d " + hours + "h "
         + minutes + "m " + seconds + "s ";
             
-        // If the count down is over, write some text 
+        // If the count down is over, write some text
         if (distance < 0) {
             clearInterval(x);
-            document.getElementById("demo").innerHTML = "We begin now!";
+            document.getElementById("demo").innerHTML = "0d 0h 0m";
         }
         }, 1000);
 
