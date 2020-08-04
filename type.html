@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>iType.js | Javascript animated typing, with no dependencies </title>
+
+  
+</head>
+
+<body>
+    <script src="https://unpkg.com/ityped@1.0.3"></script>
+    <div class="content">
+        <h1 class="title">iTyped.js</h1>
+        <div>
+        <span id="ityped" class="ityped"></span>
+        </div>
+        <a href="https://github.com/luisvinicius167/ityped"><button>Get Started now!</button></a>
+    </div>
+    <script>
+    ityped.init('#ityped', {
+        strings:['Dead simple animated typed.', 'No jQuery dependency.', 'Tiny size: <3kb.', 'Just install and Enjoy!'],
+        startDelay: 200,
+        loop: true
+    });
+
+    </script>
+</body>
+
+</html>
